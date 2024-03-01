@@ -1,5 +1,11 @@
 voltege divider netlist
-V1 in 0 1
+V1 in 0 dc 0 pulse (0 2 95n 2n 2n 90n 180n)
 R1 in out 1k
 R2 out 0 2k
+
+.controll
+    tran 100p 500n
+    print v(in) v(out)
+    exit
+.endc
 .end
