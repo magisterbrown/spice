@@ -3,11 +3,11 @@ inverter circuit
 .model pmfeet pmos ()
 
 Vcc cc 0 2
-V1 ain 0 pulse (0 2 5n 2n 2n 90n 180n)
+V1 ain 0 pulse (0 8 5n 2n 2n 90n 180n)
 V2 bin 0 pulse (0 2 5n 2n 2n 45n 80n)
 
 Mnmos1 nm1out ain 0 0 nmfeet
-Mnmos2 out bin nm1out 0 nmfeet
+Mnmos2 out bin nm1out nm1out nmfeet
 
 Mpmos1 out ain cc cc pmfeet
 Mpmos2 out bin cc cc pmfeet
